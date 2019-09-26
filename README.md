@@ -17,8 +17,24 @@ type dateTest struct {
   err bool
 }
 
+func TestParseLayout(t *testing.T) {
+  for _, th := range testParseFormat {
+    l, err := ParseFormat(th.in)
+    if th.err {
+      assert.NotEqaul(t, nil, err)
+    } else {
+      assert.Equal(t, nil, err)
+      assert.Equal(t, th.out, ;, "for in=%v", th.in)
+    }
+  }
+}
 
+var testParseStrict = []dateTest{
+}
 
+func TestParseStrict(t * testing.T) {
+
+}
 ```
 
 ```
